@@ -1,4 +1,5 @@
 这是接入东莞社保的DLL，由于还在使用，不提供源码，只提供使用办法和DLL编译后的程序在Release
+
  struct general_struct
 	{
 		const char * accessKey;
@@ -25,9 +26,14 @@
 
 	}general_ret_struct;
 
-	int   postsignin(general_struct & gs,
+
+// 【9001】签到
+
+int   postsignin(general_struct & gs,
 		const char * opter_no, const char * netcardname,
 		general_ret_struct & grs, char * retsign_time, char * retsign_no);
+
+//6.7.1.2 【9002】签退
 
 	int    postsignout(general_struct & gs,
 		const char * opter_no, general_ret_struct & grs, char * retsign_time);
@@ -111,6 +117,7 @@
 
 
 	//1101	人员基本信息获取
+	
 	int   getclientinfo(general_struct & gs,
 		clientinfo_struct & cs,
 		clientinfo_baseinfo_ret_struct & cbrs,
@@ -228,6 +235,7 @@
 	}cal_detlcutinfo_ret_struct;
 
 	//2101	药店预结算
+	
 	int   postcalthefees(general_struct & gs,
 		cal_druginfo_struct & cdis,
 		int recordscount,
@@ -352,6 +360,7 @@
 
 
 	//2102	药店结算
+	
 	int   posttransaction(general_struct & gs,
 		trans_druginfo_struct & dis,
 		int recordscount,
@@ -410,6 +419,7 @@
 	}pullback_setldetail_ret_struct;
 
 	//2103	药店结算撤销
+	
 	int   pullbacktransaction(general_struct & gs,
 		pullback_struct & ps,
 		pullback_setlinfo_ret_struct & pslrs,
@@ -499,6 +509,7 @@
 
 
 	//5203	结算信息查询
+	
 	int  querytransbasic(general_struct & gs,
 		query_trans_basi_struct & qtbs,
 		query_trans_basi_ret_setlinfo & qtbrsl,
@@ -573,6 +584,7 @@
 	}query_tran_detai_ret_struct;
 
 	//5204	费用明细查询
+	
 	int   querytransdetail(general_struct & gs,
 		query_tran_detai_struct & qtds,
 		int & querytrandetairecordscount,
@@ -607,6 +619,7 @@
 	}personleverage_ret_struct;
 
 	//2001	人员待遇享受检查
+	
 	int   getpersonleverage(general_struct & gs,
 		personleverage_struct & ps,
 		int & recordscount,
@@ -614,6 +627,7 @@
 		general_ret_struct & grs);
 	
 	//2601	冲正交易
+	
 	int   postcanceloperation(general_struct & gs,
 		const char * psn_no, const char * omsgid, const char * oinfno,
 		general_ret_struct & grs);
@@ -640,6 +654,7 @@
 
 
 	//3201	医药机构费用结算对总账
+	
 	int   querytransettlesummary(general_struct & gs,
 		query_settle_sum_struct & qsss,
 		query_settle_sum_ret_struct & qssrs,
@@ -691,6 +706,7 @@
 
 
 	//3202	医药机构费用结算对明细账
+	
 	int   querytransettledetail(general_struct & gs,
 		query_settle_datail_struct & qsds,
 		int updfilerecordscount,
@@ -815,6 +831,7 @@
 	}prot_fund_bldinfo;
 
 	//4101A	医疗保障基金结算清单信息上传
+	
 	int   postprotectfundpayinfo2(general_struct & gs,
 		prot_fund_setlinfo_struct & pfss,
 		int opspdiserecordscount,
@@ -838,6 +855,7 @@
 	}alter_prot_fund_status_struct;
 
 	//4102	医疗保障基金结算清单信息状态修改
+	
 	int  alterprotectfundinfostatus(general_struct & gs,
 		int apfsrecordscount,
 		alter_prot_fund_status_struct * apfss,
@@ -1043,6 +1061,7 @@
 	}query_prot_fund_ret_bldinfo;
 
 	//4103	医疗保障基金结算清单信息查询
+	
 	int  queryprotectfundrecords(general_struct & gs,
 		//query_prot_fund_struct qpfs,
 		const char * psno, const char * setlid,
@@ -1098,6 +1117,7 @@
 	}post_full_pay_feedetail;
 
 	//4201	自费病人费用明细信息上传
+	
 	int   postfullpayinfo(general_struct & gs,
 		post_full_pay_feedetail pfpf,
 		general_ret_struct & grs);
@@ -1178,6 +1198,7 @@
 	}query_consult_ret_struct;
 
 	//5201	就诊信息查询
+	
 	int   queryconsultrecrods(general_struct & gs,
 		query_consult_struct & qcs,
 		int & recordscount,
@@ -1206,6 +1227,7 @@
 	}query_disea_ret_struct;
 
 	//5202	诊断信息查询
+	
 	int   querydiseaserecords(general_struct & gs,
 		const char * mdtrt_id, const char * psn_no,
 		int  & recordscount,
@@ -1258,6 +1280,7 @@
 	}query_chronic_ret_struct;
 
 	//5205	人员慢特病用药记录查询
+	
 	int   querychronicrecords(general_struct & gs,
 		query_chronic_struct & qcs,
 		int & recordscount,
@@ -1274,6 +1297,7 @@
 	}query_personal_med;
 
 	//5301	人员慢特病备案查询
+	
 	int   querypersonalmedrecords(general_struct & gs,
 		const char * psn_no,
 		int & recordscount,
@@ -1292,6 +1316,7 @@
 	}dl_content_struct;
 
 	//1301	西药中成药目录下载
+	
 	int   dlpharmdict(general_struct & gs,
 		const char * ver,
 		dl_ret_struct & drs,
@@ -1299,6 +1324,7 @@
 		general_ret_struct & grs);
 
 	//1302	中药饮片目录下载
+	
 	int   dlchinesetraditiondict(general_struct & gs,
 		const char * ver,
 		dl_ret_struct & drs,
@@ -1307,6 +1333,7 @@
 
 
 	//1309	门诊慢特病种目录下载
+	
 	int   dlchonicdict(general_struct & gs,
 		const char * ver,
 		dl_ret_struct & drs,
@@ -1371,6 +1398,7 @@
 
 
 	//1312	医保目录信息下载
+	
 	int   queryinsuranceprod(general_struct & gs,
 		query_insur_prod_struct & qips,
 		int  & recordscount,
@@ -1419,6 +1447,7 @@
 
 
 	//1316	医疗目录与医保目录匹配信息下载
+	
 	int   queryinsurelation(general_struct & gs,
 		query_insur_relationship_struct & qirs,
 		int  & recordscount,
@@ -1477,6 +1506,7 @@
 	}query_prod_relat_ret_struct;
 
 	//1317	医药机构目录匹配信息下载
+	
 	int   queryprodlocalninusrancrelation(general_struct & gs,
 		query_prod_relat_struct & qprs,
 		int &  recordscount,
@@ -1528,6 +1558,7 @@
 	}query_restr_pric_ret_struct;
 
 	//1318	医保目录限价信息下载
+	
 	int   queryretrictedpriceprod(general_struct & gs,
 		query_restr_pric_struct & qrps,
 		int & recordscount,
@@ -1579,6 +1610,7 @@
 	} query_own_pay_per_ret_struct;
 
 	//1319	医保目录先自付比例信息下载
+	
 	int   queryownexpenseper(general_struct & gs,
 		query_own_pay_per_struct & qopps,
 		int  & recordscount,
@@ -1610,6 +1642,7 @@
 
 
 	//1901	字典表下载
+	
 	int   querydict(general_struct & gs,
 		query_dict_struct & qds,
 		int  & recordscount,
@@ -1636,6 +1669,7 @@
 
 
 	//5302 人员定点信息查询
+	
 	int   querypsninfo(general_struct & gs,
 		query_psn_info_struct & qpis,
 		int & retrecordscount,
@@ -1666,6 +1700,7 @@
 
 
 	//2201 门诊挂号
+	
 	int   postconslutreg(general_struct & gs,
 		post_conslutreg_struct & pcs,
 		post_conslutreg_ret_struct & pcrs,
@@ -1700,6 +1735,7 @@
 
 
 	//2203 门诊就诊信息上传
+	
 	int   postconslutinfo(general_struct & gs,
 		post_mdtrtinfo_struct & pmis,
 		int recordscount,
@@ -1769,6 +1805,7 @@
 	}post_clinic_detail_ret_struct;
 
 	//2204 门诊费用明细信息上传
+	
 	int   postclinicdetail(general_struct & gs,
 		int post_clinic_details_count,
 		post_clinic_detail_struct * pcds,
@@ -1849,6 +1886,7 @@
 	}cal_clinic_fees_ret_setldetail;
 
 	//2206 门诊预结算
+	
 	int   calclinicfees(general_struct & gs,
 		cal_clinic_fees_struct & ccfs,
 		cal_clinic_fess_ret_setlinfo & ccfrsl,
@@ -1934,6 +1972,7 @@
 	}post_clinic_trans_ret_setldetail;
 
 	//2207 门诊结算
+	
 	int   postclinictrans(general_struct & gs,
 		post_clinic_tran_struct & pcts,
 		post_clinic_trans_ret_setlinfo & pctrsl,
@@ -1992,6 +2031,7 @@
 
 
 	//2208 门诊结算撤销
+	
 	int   pullbackclinictrans(general_struct & gs,
 		pullback_clinic_trans_struct & ccts,
 		pullback_clinic_trans_ret_setlinfo cctrsl,
@@ -2001,6 +2041,7 @@
 
 
 	//2205 门诊费用明细信息撤销
+	
 	int   cancelclinicdetail(general_struct & gs,
 		const char * mdtrt_id,
 		const char *chrg_bchno,
@@ -2008,6 +2049,7 @@
 		general_ret_struct & grs);
 
 	//2202 门诊挂号撤销
+	
 	int    cancelclinicreg(general_struct & gs,
 		const char * psn_no,
 		const char *mdtrt_id,
@@ -2031,6 +2073,7 @@
 	}query_hosp_info_ret_struct;
 
 	//1201 医药机构信息获取
+	
 	int  queryhospinfo(general_struct & gs,
 		query_hosp_info_struct & qhis,
 		int &  recordscount,
