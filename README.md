@@ -34,7 +34,7 @@
 
 // 【9001】签到
 
-int   postsignin(general_struct & gs,
+       int   postsignin(general_struct & gs,
 		const char * opter_no, const char * netcardname,
 		general_ret_struct & grs, char * retsign_time, char * retsign_no);
 
