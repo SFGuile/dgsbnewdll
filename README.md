@@ -1,5 +1,6 @@
 这是接入东莞社保的DLL，由于还在使用，不提供源码，只提供使用办法和DLL编译后的程序在Release
 
+
  struct general_struct
 	{
 		const char * accessKey;
