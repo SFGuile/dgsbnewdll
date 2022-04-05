@@ -4,7 +4,7 @@
 
 
 
- struct general_struct
+        struct general_struct
 	{
 		const char * accessKey;
 		const char * secreKey;
