@@ -3,6 +3,7 @@
 此DLL给还在使用PB，DELPHI VB6 等语言还没有HTTP调用功能语言使用 各变量和开发文档的里各种对应，看Release压缩包的开发文档
 
 
+
  struct general_struct
 	{
 		const char * accessKey;
@@ -20,6 +21,7 @@
 		int returncode;
 		bool iftest;
 	}general_struct;
+	
 
 	 struct  general_ret_struct {
 		char * inf_refmsgid;
