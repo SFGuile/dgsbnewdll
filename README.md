@@ -1,6 +1,6 @@
 这是接入东莞社保的DLL，由于还在使用，不提供源码，只提供使用办法和DLL编译后的程序在Release
 
-此DLL给还在使用PB，DELPHI VB6 等语言还没有HTTP调用功能语言使用 给变量和开发文档的里各种对应，看Release压缩包的开发文档
+此DLL给还在使用PB，DELPHI VB6 等语言还没有HTTP调用功能语言使用 各变量和开发文档的里各种对应，看Release压缩包的开发文档
 
 
  struct general_struct
