@@ -2174,7 +2174,7 @@
 
 	//90502 月结对数
 	
-  int  settelmonthly(general_struct & gs,
+          int  settelmonthly(general_struct & gs,
 		settel_monthly_struct  & smstr ,
 		settel_monthly_ret_struct & smrs,
 		int &  setlinforecordscount,
